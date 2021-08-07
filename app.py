@@ -41,6 +41,6 @@ if uploaded_file is not None:
         st.write("Classifying...")
         label = teachable_machine_classification(image, 'keras_model.h5')
         if label == 0:
-            st.write("Ship")
+            st.markdown('This is more likely to be **_Ship_**.')
         else:
-            st.write("Truck")
+            st.markdown('This is more likely to be **_Truck_**.')
